@@ -2,9 +2,9 @@
   addEventListener("DOMContentLoaded", function(){
     questions = [
       {
-        question: "Which is your favorite letter?",
+        question: "Which would you most want to farm?",
         answers: {
-          right: only.html({p: "A"}),
+          right: makeImage("silkworms.jpg"),
           wrong: [
             only.html({p: "B"}),
             only.html({p: "C"}),
@@ -22,6 +22,13 @@
         }
       }
     ]
+
+    function makeImage(name){
+      return only.html({img: "", src: "images/"+name,
+                          css: {
+                            height: "200px",
+                          }})
+    }
 
     function makeQuestionPage(question, callback){
 
